@@ -1,0 +1,194 @@
+.navbar-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  z-index: $z-index-3;
+  height: 12rem;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, height 0.3s ease, background-color 0.3s ease;
+
+  @include tablet-portrait {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: var(--space-9);
+    padding-right: var(--space-9);
+    height: 18rem;
+  }
+
+  .container-logo {
+    width: 100%;
+    .logo {
+      display: block;
+      transition: 0.3s ease;
+      height: 4.5rem;
+      &:hover {
+        transform: scale(1.015);
+      }
+      @include tablet-portrait {
+        cursor: pointer;
+        height: 10rem;
+      }
+    }
+  }
+  .navbar-header__second {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    justify-content: space-between;
+    width: 100%;
+    // background-color: rebeccapurple !important;
+    @include tablet-portrait {
+      width: min-content;
+      gap: var(--space-9);
+    }
+
+    span {
+      font-size: 14px;
+      color: var(--color-text);
+    }
+    .navbar__actions {
+      padding-bottom: 3px;
+      .bag {
+        @extend .flex-center;
+        cursor: pointer;
+        vertical-align: middle;
+        path{
+          transition: opacity .3s ease;
+        }
+        .bag__icon{
+          .bag__icon--outline{
+            opacity: 1;
+          }
+          .bag__icon--fill{
+            opacity: 0;
+          }
+        }
+        &:hover{
+          .bag__icon--fill{
+            opacity: 1;
+          }
+          .bag__icon--outline{
+            opacity: 0;
+          }
+        }
+        span {
+          margin-top: 2px;
+          line-height: 1;
+        }
+        &::before{
+          content: "3";
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: var(--color-text);
+          height: 20px;
+          width: 20px;
+          background-color: white;
+          border-radius: 20px;
+        }
+      }
+
+      & > * {
+        display: none;
+        transition: transform .3s ease;
+        svg{
+          height: 32px;
+          path{
+            fill: rgb(32, 32, 32);
+          }
+        }
+        &:hover{
+          transform: translateY(-4px);
+        }
+        &:active{
+          transform: translateY(0px);
+
+        }
+      }
+    }
+    .navbar__hamburguer {
+      z-index: $z-index-3;
+      @include tablet-portrait {
+        display: none;
+      }
+    }
+    .navbar__links {
+      @extend .position-fixed, .flex-center, .flex-column;
+      gap: var(--space-3);
+      font-weight: 200;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: var(--color-text);
+      background-color: var(--color-white);
+      transform: translateX(100%);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      @include tablet-landscape {
+        transform: translateY(0);
+        background-color: transparent;
+        position: relative;
+        flex-direction: row;
+      }
+
+      .navbar__link {
+        color: var(--color-text);
+        &:hover {
+          font-weight: 300;
+        }
+      }
+      .navbar__link--active {
+        font-weight: 300;
+        cursor: default;
+        &::after,
+        &::before {
+          opacity: 0;
+        }
+
+        color: red;
+      }
+    }
+    .navbar--visible {
+      transform: translateX(0);
+    }
+  }
+}
+.navbar-header--small {
+  // height: 3rem;
+  // background-color: gold;
+  // .logo {
+  //   height: 0rem;
+  //   polygon,
+  //   path {
+  //     transition: fill 0.3s ease;
+  //     // fill: var(--color-header);
+  //   }
+  // }
+  // @include tablet-landscape {
+  //   height: 2rem;
+  // }
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  .container-logo {
+    .logo {
+      display: none;
+      transform: translateY(0);
+    }
+  }
+}
+// .navbar-header--hide {
+//   transform: translateY(-100%);
+//   .container-logo{
+//     .logo{
+//       display: none;
+//     }
+//   }
+// }
+.navbar-header--background {
+  background-color: rgb(255, 255, 255);
+}

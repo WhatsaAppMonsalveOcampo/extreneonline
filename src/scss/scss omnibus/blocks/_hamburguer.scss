@@ -1,0 +1,61 @@
+//  TODO:ANCHOR --- BUTTON HAMBURGUER
+
+.navbar__hamburguer{
+    @extend .flex-center;
+    // &::before{
+    //     content: "Menu";
+    //     color: var(--color-text);
+    //     font-size: 14px;
+    // }
+
+}
+.hamburguer{
+    $width: 32px;
+    $height: 2px;
+    // border-radius: 24px;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.5);
+    .hamburguer__div-center{
+        transition: background-color .3s ease ;
+        position: absolute;
+        width: $width;
+        height: $height;
+        background-color: var(--color-text);
+        border-radius: $height * 0.5;
+        &:before, &:after{
+            transition: background-color .3s ease ;
+            content: " ";
+            position: absolute;
+            display: block;
+            width: $width;
+            height: $height;
+            border-radius: $height * 0.5;
+            background-color: var(--color-text);
+            top: -8px;
+            transition: background-color 0.5s ease, transform 0.3s;
+
+        }
+        &:after{
+            top: 8px;
+        }
+
+    }
+    .hamburguer--simple{
+        height: 0;
+        &:before, &:after{
+            top: -2px;
+            transform: rotate(-45deg);
+            background-color: var(--color-text);
+        }
+        &:after{
+            transform: rotate(45deg);
+            background-color: var(--color-text);
+
+        }
+    }
+}

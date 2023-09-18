@@ -1,0 +1,23 @@
+extends ../templates/template.pug
+
+block head
+    link(rel="stylesheet" type="text/css" href="./index.css")
+    //- link(rel="stylesheet" type="text/css" href="./swiper.css")
+    script(src="index.js" defer)
+
+block header
+    .video-header
+        <video class="video-header__portrait"autoplay loop muted >
+            <source  src="/video/video-portrait.mp4" type="video/mp4">
+        </video>
+        <video class="video-header__landscape" autoplay loop muted >
+            <source  src="/video/video-landscape.mp4" type="video/mp4">
+        </video>
+
+        .video-header__text
+            .video-header__content-text
+                p.video-header__tittle Más de 60 años fabricando estilo
+                a(href="" class="mybtn") Quiero que me atienda alguien
+block main 
+    section.section-top.section-1
+    section.section-top.section-2

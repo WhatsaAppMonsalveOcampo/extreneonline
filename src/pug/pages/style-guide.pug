@@ -1,0 +1,57 @@
+extends ../templates/template.pug
+block head
+    link(rel="stylesheet" type="text/css" href="./style-guide.css")
+        
+block header
+
+block main
+    .container-lg
+        .style-guide__sections
+            .style-guide__sample-texts
+                h1.h1 Juan Gonzalez Barber
+                p.p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste facilis impedit laboriosam sunt consequuntur hic ducimus, mollitia alias repellendus dolores adipisci ullam! Iste ipsum sequi consectetur ipsa quaerat ex corporis.
+                .style-guide__buttons
+                    div
+                        a.mybtn.mybtn--call Call
+                        a.mybtn.mybtn--outlined outlined
+                    div
+                        a.mybtn Boton
+                        a.mybtn.mybtn--tonal Tonal
+                    div 
+                        a.mybtn.mybtn--disabled  Disabled
+                        a.mybtn.mybtn--outlined.mybtn--disabled  Disabled
+            .style-guide__section-colors
+                h2.h2 Colores
+                .style-guide__color-palette
+                    h3.h3 Primary   
+                    .style-guide__colors
+                        .style-guide__color.style-guide__color--primary-1 
+                        .style-guide__color.style-guide__color--primary-2 
+                        .style-guide__color.style-guide__color--primary-3 
+                        .style-guide__color.style-guide__color--primary-4 
+                        .style-guide__color.style-guide__color--primary-5 
+                        .style-guide__color.style-guide__color--primary-6 
+                        .style-guide__color.style-guide__color--primary-7 
+                        .style-guide__color.style-guide__color--primary-8 
+                        .style-guide__color.style-guide__color--primary-9 
+                .style-guide__color-palette
+                    h3.h3 Secondary 
+                    .style-guide__colors
+                        .style-guide__color.style-guide__color--secondary-1 
+                        .style-guide__color.style-guide__color--secondary-2 
+                        .style-guide__color.style-guide__color--secondary-3 
+                        .style-guide__color.style-guide__color--secondary-4 
+                        .style-guide__color.style-guide__color--secondary-5 
+                        .style-guide__color.style-guide__color--secondary-6 
+                        .style-guide__color.style-guide__color--secondary-7 
+                        .style-guide__color.style-guide__color--secondary-8 
+                        .style-guide__color.style-guide__color--secondary-9 
+
+            .style-guide__texts 
+                h1.h1 Esto es un titulo h1
+                h2.h2 Esto es un titulo h2
+                h3.h3 Esto es un titulo h3
+                h4.h4 Esto es un titulo h4
+                p.p-semibold Esto es un parrafo semibold
+                p.p Esto es un parrafo semibold
+                p.p-small Esto es un parrafo small

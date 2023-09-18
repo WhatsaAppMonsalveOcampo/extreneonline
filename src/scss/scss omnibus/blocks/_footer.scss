@@ -1,0 +1,13 @@
+.footer {
+  position: relative;
+  background-color: bisque;
+
+  .container-footer {
+    @extend .position-absolute, .flex-center, .flex-column;
+    height: 100%;
+
+    .h1 {
+      color: var(--color-text);
+    }
+  }
+}

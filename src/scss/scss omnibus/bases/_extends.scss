@@ -1,0 +1,273 @@
+//  TODO:ANCHOR --- STYLE GUIDE
+.pointer-events-none{
+    pointer-events: none;
+}
+
+
+
+//  TODO:ANCHOR --- BORDERS
+
+.border-left {
+    border-left: 4px solid var(--color-neutral-900);
+}
+
+.background-gradient {
+    background-image: sectionar-gradient(40deg, var(--color-primary-500) 30%, var(--color-primary-400) 75%, var(--color-primary-400));
+    transition: background-image .3s ease-in;
+
+    &:hover {
+        background-image: sectionar-gradient(40deg, var(--color-primary-600) 30%, var(--color-primary-400) 75%, var(--color-primary-300));
+
+    }
+}
+
+// TODO:ANCHOR --- BUTTON
+
+.button-effect{
+    transition: color .5s ease;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        color: var(--color-btn-hover);
+    }
+}
+.button-effect-scale{
+    transition: color .3s ease, transform .3s ease;
+    cursor: pointer;
+    user-select: none;
+    &:hover{
+        transform: scale(1.05);
+        color: var(--color-btn-hover);
+    }
+    &:active{
+        transform: scale(.95);
+    }
+}
+
+
+//  TODO:ANCHOR --- ANIMATED BORDER
+
+.animated-border {
+    transition: font-weight .2s ease;
+    &:after {
+        content: "";
+        margin-top: 3px;
+        display: block;
+        transform: translateX(100%);
+        width: 0%;
+        height: 2px;
+        background: var(--color-border-link-menu);
+        border-radius: 2px;
+        transition: width .5s, transform .5s ;
+    }
+
+    &:hover:after {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+.animated-border--left {
+    &::after{
+        transform: translateX(0);
+    }
+}
+.animated-border--center {
+    &::after{
+        position: relative;
+        width: 0;
+        transform: translateX(0);
+        margin: auto;
+        transition: left .5s , width .5s;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+
+.animated-border--doble {
+    position: relative;
+    transition: color .5s ease-in-out;
+    &::before, &::after{
+        background-color: var(--color-border-link-menu);
+        position: absolute;
+        width: 0;
+        height: 2px;
+        transition: width .5s, transform .5s;
+    }
+
+    &::before {
+        transform: translateX(-100%);
+        content: '';
+        top: -2px;
+        right: 0;
+    }
+
+    &::after {
+        left: 0px;
+    }
+
+    &:hover {
+        color: var(--color-border-link-menu);
+
+        &::before, &::after {
+            width: 100%;
+            background: var(--color-border-link-menu);
+            transform: translateX(0);
+        }
+    }
+}
+
+
+// TODO:ANCHOR --- SCROLLBAR
+
+.scrollbar-none {
+    overflow-y: scroll;
+    // * para mozilla
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+}
+
+.scrollbar-style{
+    &::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        border-radius: 20px;
+        
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--color-scroll);
+        border-radius: 3px;
+    }
+
+}
+
+
+
+// TODO:ANCHOR --- BACKGROUND
+
+.background-parallax{
+    background-attachment: fixed;
+    max-width: 100%;
+    background-repeat: no-repeat;
+}
+
+.background-pseudo-element {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+// TODO:ANCHOR --- title DECORATION
+
+.title-decoration-section {
+    position: relative;
+    display: ininline-block;
+    margin-bottom: var(--space-1);
+    text-align: center;
+    color: var(--color-primary-700);
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background-color: currentcolor;
+        top: 55%;
+    }
+
+    &::after {
+        left: -140px;
+    }
+
+    &::before {
+        right: -140px;
+    }
+
+}
+
+//  TODO:ANCHOR --- POSITION
+
+.position-absolute{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.position-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+//  TODO:ANCHOR --- FLEX-BOX
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-items-start{
+    display: flex;
+    align-items: flex-start;
+}
+.align-items-center{
+    display: flex;
+    align-items: center;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-start{
+    justify-content: start;
+}
+.justify-content-end{
+    justify-content: end;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.space-evenly{
+    display: flex;
+    justify-content: space-evenly;
+}
+.space-around{
+    display: flex;
+    justify-content: space-around;
+}
+
+

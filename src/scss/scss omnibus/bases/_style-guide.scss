@@ -1,0 +1,340 @@
+// TODO:ANCHOR --- COLORS
+
+.body {
+  // TODO:ANCHOR --- BORDER RADIUS
+  --border-radius: 0px;
+
+
+  // TODO:ANCHOR --- GENERAL COLORS
+
+  // * White
+  --color-white: #fefefe;
+
+  // * Primary
+  --color-primary-900: #121212;
+  --color-primary-800: #1a1a1a;
+  --color-primary-700: #1f1f1f;
+  --color-primary-600: #2c2c2c;
+  --color-primary-500: #353535;
+  --color-primary-400: #464646;
+  --color-primary-300: #5d5d5d;
+  --color-primary-200: #8b8b8b;
+  --color-primary-100: #bababa;
+  // * Secondary
+  --color-secondary-100: #e08685;
+  --color-secondary-200: #d36463;
+  --color-secondary-300: #c84241;
+  --color-secondary-400: #b8201f;
+  --color-secondary-500: #c80404;
+  --color-secondary-600: #a00303;
+  --color-secondary-700: #7f0202;
+  --color-secondary-800: #5d0101;
+  --color-secondary-900: #3b0000;
+
+
+  // TODO:ANCHOR --- SPECIFIC COLORS
+
+  // * Button
+  --color-btn: var(--color-primary-300);
+  --color-btn-hovered: var(--color-white);
+
+  // * Button outlined
+  --color-btn-outlined: var(--color-white);
+
+  // * Button tonal
+  --color-btn-tonal: var(--color-primary-500);
+  --color-btn-tonal-hovered: var(--color-primary-600);
+
+  // * Button call
+  --color-btn-call: var(--color-primary-900);
+
+
+  // * Color text
+  --color-text: var(--color-primary-900);
+  --color-text-white: #fefefe;
+
+  // * Color title
+  --color-title: var(--color-white);
+  --color-title-white: var(--color-white);
+
+  // * Background 
+  --color-background-primary: #0c0c0c;
+  --color-background-secondary: #121212;
+  // --color-background-primary: #fefefe;
+  // --color-background-secondary: #f9f9f9;
+
+  // * Color icons
+  --color-icons-primary: var(--color-primary-500);
+
+  // * Color footer
+  --color-footer: var(--color-primary-900);
+
+  // * Color scrollbar
+  --scrollbar: var(--color-secondary-500);
+
+  // * Color border link
+  --color-border-link-menu: var(--color-primary-600);
+
+  // * color Scroll
+  --color-scroll: var(--color-primary-300);
+
+  // * Color Selection
+  --color-selection: var(--color-primary-400);
+
+
+
+}
+
+
+//  TODO:ANCHOR --- BUTTON
+
+.mybtn {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: var(--border-radius);
+  font-family: "button", "p", arial;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 24px;
+  min-width: max-content;
+  max-width: max-content;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color .5s ease, transform 0.3s ease;
+  // box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);  
+  border: 1px solid var(--color-white);
+
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-white);
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+}
+
+.mybtn--outlined {
+  background-color: transparent;
+  color: var(--color-btn-outlined);
+  border: 1px solid var(--color-btn-outlined);
+  box-shadow: none;
+}
+.mybtn--tonal {
+  background-color: var(--color-primary-600);
+}
+
+
+
+
+.mybtn--disabled {
+  opacity: .2;
+  pointer-events: none;
+}
+
+.mybtn--sm {
+  padding: 8px 20px;
+
+}
+
+// TODO:ANCHOR --- ICONS
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  src: url(./MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: ininline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.pseudo-icon {
+  font-family: "material-icons";
+  vertical-align: middle;
+  margin-right: 4px;
+  font-size: 24px;
+  color: inherit;
+}
+
+//  TODO:ANCHOR --- TEXTS
+
+// * Paragraph
+@font-face {
+  font-family: "p";
+  font-display: swap;
+  src: local("text"),
+    url(./text.ttf) format("truetype");
+}
+
+// * title
+@font-face {
+  font-family: "title";
+  font-display: swap;
+  font-style: normal;
+  src: local("title"),
+    url(./title.ttf) format("truetype");
+}
+
+// // * Button
+// @font-face {
+//   font-family: Arial, Helvetica, sans-serif;
+//   font-family: "button";
+//   font-display: swap;
+//   src: local("text"),
+//     url(./text.ttf) format("truetype");
+
+// }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "title";
+  line-height: 1;
+  font-weight: 400;
+  color: var(--color-title);
+  --scale-text: 1px;
+  @include mobile-small {
+    --scale-text: 10px;
+  }
+}
+
+
+
+.h1 {
+  @include max-width(360px) {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  font-size: calc(var(--scale-text) + 42px);
+  text-align: center;
+
+  @include min-height-min-width(400px, 768px) {
+    font-size: calc(var(--scale-text) + 48px);
+  }
+}
+
+.h2 {
+  font-size: calc(var(--scale-text) + 28px);
+
+  @include min-height-min-width(400px, 768px) {
+    font-size: calc(var(--scale-text) + 40px);
+  }
+}
+
+.h3 {
+  font-size: calc(var(--scale-text) + 24px);
+
+  @include min-height-min-width(400px, 768px) {
+    font-size: calc(var(--scale-text) + 32px);
+  }
+}
+
+.h4 {
+  font-size: calc(var(--scale-text) + 20px);
+
+  @include min-height-min-width(400px, 768px) {
+    font-size: calc(var(--scale-text) + 22px);
+  }
+}
+
+.p {
+  font-size: inherit;
+  text-align: left;
+}
+
+.p-semibold {
+  font-weight: 600;
+  font-size: inherit;
+  text-align: left;
+}
+
+.p-small {
+  font-size: 14px;
+}
+
+//  TODO:ANCHOR --- SPACES
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+
+  @include min-width(768px) {
+    --space-1: 8px;
+    --space-2: 12px;
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 40px;
+    --space-8: 48px;
+    --space-9: 64px;
+  }
+}
+
+//  TODO:ANCHOR --- border radius
+
+.border-radius {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+//  TODO:ANCHOR --- SHADOWS
+
+.border-shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.border-shadow-left {
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.boton-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  svg {
+    height: 24px;
+  }
+}
