@@ -4,7 +4,6 @@
   // TODO:ANCHOR --- BORDER RADIUS
   --border-radius: 0px;
 
-
   // TODO:ANCHOR --- GENERAL COLORS
 
   // * White
@@ -31,7 +30,6 @@
   --color-secondary-800: #5d0101;
   --color-secondary-900: #3b0000;
 
-
   // TODO:ANCHOR --- SPECIFIC COLORS
 
   // * Button
@@ -48,7 +46,6 @@
   // * Button call
   --color-btn-call: var(--color-primary-900);
 
-
   // * Color text
   --color-text: var(--color-primary-900);
   --color-text-white: #fefefe;
@@ -57,9 +54,9 @@
   --color-title: var(--color-white);
   --color-title-white: var(--color-white);
 
-  // * Background 
-  --color-background-primary: #0c0c0c;
-  --color-background-secondary: #121212;
+  // * Background
+  --color-background-primary: #fefefe;
+  --color-background-secondary: #fefefe;
   // --color-background-primary: #fefefe;
   // --color-background-secondary: #f9f9f9;
 
@@ -80,11 +77,7 @@
 
   // * Color Selection
   --color-selection: var(--color-primary-400);
-
-
-
 }
-
 
 //  TODO:ANCHOR --- BUTTON
 
@@ -101,17 +94,31 @@
   color: var(--color-white);
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.3s ease, color .5s ease, transform 0.3s ease;
-  // box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);  
+  transition: background-color 0.3s ease, color 0.5s ease, transform 0.3s ease;
+  // box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
   border: 1px solid var(--color-white);
-
-  &:hover {
-    color: var(--color-text);
-    background-color: var(--color-white);
+  span {
+    color: var(--color-white);
+  }
+  svg {
+    fill: var(--color-white);
+  }
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-text);
+      background-color: var(--color-white);
+      span {
+        color: var(--color-text);
+      }
+      svg {
+        fill: var(--color-text);
+      }
+    }
   }
 
+
   &:active {
-    transform: scale(.95);
+    transform: scale(0.95);
   }
 }
 
@@ -125,32 +132,27 @@
   background-color: var(--color-primary-600);
 }
 
-
-
-
 .mybtn--disabled {
-  opacity: .2;
+  opacity: 0.2;
   pointer-events: none;
 }
 
 .mybtn--sm {
   padding: 8px 20px;
-
 }
 
 // TODO:ANCHOR --- ICONS
 
 @font-face {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
   src: url(./MaterialIcons-Regular.eot);
   /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
   src: url(./MaterialIcons-Regular.ttf) format("truetype");
 }
 
@@ -194,8 +196,7 @@
 @font-face {
   font-family: "p";
   font-display: swap;
-  src: local("text"),
-    url(./text.ttf) format("truetype");
+  src: local("text"), url(./text.ttf) format("truetype");
 }
 
 // * title
@@ -203,8 +204,7 @@
   font-family: "title";
   font-display: swap;
   font-style: normal;
-  src: local("title"),
-    url(./title.ttf) format("truetype");
+  src: local("title"), url(./title.ttf) format("truetype");
 }
 
 // // * Button
@@ -231,12 +231,10 @@ h4 {
   }
 }
 
-
-
 .h1 {
   @include max-width(360px) {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   font-size: calc(var(--scale-text) + 42px);
@@ -298,6 +296,7 @@ h4 {
   --space-7: 32px;
   --space-8: 40px;
   --space-9: 48px;
+  --space-10: 56px;
 
   @include min-width(768px) {
     --space-1: 8px;
@@ -308,7 +307,8 @@ h4 {
     --space-6: 32px;
     --space-7: 40px;
     --space-8: 48px;
-    --space-9: 64px;
+    --space-9: 66px;
+    --space-10: 74px;
   }
 }
 

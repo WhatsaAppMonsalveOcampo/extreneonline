@@ -13,7 +13,7 @@
   align-items: center;
   transition: transform 0.5s ease, height 0.3s ease, background-color 0.3s ease;
 
-  @include tablet-portrait {
+  @include tablet-landscape {
     flex-direction: row;
     justify-content: space-between;
     padding-left: var(--space-9);
@@ -27,11 +27,20 @@
       display: block;
       transition: 0.3s ease;
       height: 4.5rem;
+      .logo_description{
+        display: none;
+      }
       &:hover {
         transform: scale(1.015);
       }
-      @include tablet-portrait {
+      @include tablet-landscape {
         cursor: pointer;
+        height: 8rem;
+        .logo_description{
+          display: block;
+        }  
+      }
+      @include desktop{
         height: 10rem;
       }
     }
@@ -43,7 +52,7 @@
     justify-content: space-between;
     width: 100%;
     // background-color: rebeccapurple !important;
-    @include tablet-portrait {
+    @include tablet-landscape {
       width: min-content;
       gap: var(--space-9);
     }
@@ -55,6 +64,7 @@
     .navbar__actions {
       padding-bottom: 3px;
       .bag {
+        position: relative;
         @extend .flex-center;
         cursor: pointer;
         vertical-align: middle;
@@ -76,21 +86,32 @@
           .bag__icon--outline{
             opacity: 0;
           }
+          &::before{
+            opacity: 1;
+          }
+
         }
         span {
           margin-top: 2px;
           line-height: 1;
         }
         &::before{
-          content: "3";
+          content: "99";
           display: flex;
           justify-content: center;
           align-items: center;
           color: var(--color-text);
-          height: 20px;
-          width: 20px;
+          // height: 16px;
+          // width: 16px;
+          padding: 8px 4px;
           background-color: white;
-          border-radius: 20px;
+          border-radius: 16px;
+          font-size: 12px;
+          position: absolute;
+          top: 12px;
+          left: -4px;
+          opacity: 0;
+          transition: opacity .3s ease;
         }
       }
 
@@ -114,7 +135,7 @@
     }
     .navbar__hamburguer {
       z-index: $z-index-3;
-      @include tablet-portrait {
+      @include tablet-landscape {
         display: none;
       }
     }
