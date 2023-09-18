@@ -73,12 +73,39 @@ body {
           .swiper-slide{
             height: 100%;
             width: 100%;
-            .mySwiper__img{
+            display: flex;
+            position: relative;
+            .mySlider__picture{
               width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: top;
-              
+              .mySwiper__img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+              }
+            }
+            .mySwiper__text {
+              @extend .position-absolute, .flex-center, .flex-column;
+              align-items: flex-start;
+              gap: var(--space-3);
+              background-color: rgba(0, 0, 0, 0.25);
+              padding: var(--space-3);
+              height: min-content;
+              width: max-content;
+              max-width: 100%;
+              top: auto;
+              bottom: 10%;
+              @include tablet-landscape{
+                top: 0;
+                bottom: 0;
+                width: max-content;
+                margin-left: 20%;
+
+              }
+
+              h2,p{
+                color: var(--color-white);
+              }
             }
           }
         }

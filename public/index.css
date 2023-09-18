@@ -214,7 +214,7 @@ img {
   --color-btn-call: var(--color-primary-900);
   --color-text: var(--color-primary-900);
   --color-text-white: #fefefe;
-  --color-title: var(--color-white);
+  --color-title: var(--color-text);
   --color-title-white: var(--color-white);
   --color-background-primary: #fefefe;
   --color-background-secondary: #fefefe;
@@ -282,16 +282,6 @@ img {
 .mybtn--disabled {
   opacity: 0.2;
   pointer-events: none;
-}
-
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(./MaterialIcons-Regular.eot);
-  /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
-  src: url(./MaterialIcons-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -443,7 +433,7 @@ h4 {
   border-radius: 3px;
 }
 
- body .header .video-header .video-header__text {
+ body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text {
   position: absolute;
   top: 0;
   right: 0;
@@ -460,13 +450,13 @@ h4 {
   bottom: 0;
 }
 
- body .main .section-2, body .header .video-header .video-header__text, .navbar__hamburguer, .navbar-header .navbar-header__second .navbar__links, .navbar-header .navbar-header__second .navbar__actions .bag {
+ body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar__hamburguer, .navbar-header .navbar-header__second .navbar__links, .navbar-header .navbar-header__second .navbar__actions .bag {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
- body .main .section-2, body .header .video-header .video-header__text, .navbar-header .navbar-header__second .navbar__links {
+ body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar-header .navbar-header__second .navbar__links {
   display: flex;
   flex-direction: column;
 }
@@ -911,14 +901,44 @@ body .main .section-1 .mySwiper {
 body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide {
   height: 100%;
   width: 100%;
+  display: flex;
+  position: relative;
 }
-body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__img {
+body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySlider__picture {
+  width: 100%;
+}
+body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySlider__picture .mySwiper__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text {
+  align-items: flex-start;
+  gap: var(--space-3);
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: var(--space-3);
+  height: -moz-min-content;
+  height: min-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  top: auto;
+  bottom: 10%;
+}
+@media screen and (min-width: 1014px) {
+  body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text {
+    top: 0;
+    bottom: 0;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: 20%;
+  }
+}
+body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text h2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text p {
+  color: var(--color-white);
 }
 body .main .section-1 .mySwiper .mySwiper__buttons .swiper-button-next, body .main .section-1 .mySwiper .mySwiper__buttons .swiper-button-prev {
   width: auto;

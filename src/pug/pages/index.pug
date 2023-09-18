@@ -18,7 +18,7 @@ block header
 
         .video-header__text
             .video-header__content-text
-                p.video-header__tittle Más de 60 años fabricando estilo
+                h2.h4.video-header__tittle Más de 60 años fabricando estilo
                 a(href="" class="mybtn") Quiero que me atienda alguien
 block main 
     section.section-top.section-2.container-lg
@@ -30,15 +30,23 @@ block main
         .swiper.mySwiper
             .swiper-wrapper
                 .swiper-slide
-                    <picture>
+                    <picture class="mySlider__picture">
                         <source media="(orientation: landscape)" srcset="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
                         img(class="mySwiper__img" src="https://images.unsplash.com/photo-1503342296413-28a6ec3768b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80", alt="alt")
                     </picture>
+                    .mySwiper__text
+                        h2.h2.mySwiper__title Camisetas Basícas Estampadas
+                        p.p Camisetas 100% algodón con estampados en serigrafia
+                        a(class="mybtn" href="") Ver más
                 .swiper-slide
-                    <picture>
+                    <picture class="mySlider__picture">
                         <source media="(orientation: landscape)" srcset="https://images.unsplash.com/photo-1503341733017-1901578f9f1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80">
                         img(class="mySwiper__img" src="https://images.unsplash.com/photo-1502389614483-e475fc34407e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80", alt="")
                     </picture>
+                    .mySwiper__text 
+                        h2.h2.mySwiper__title Camisetas Basícas Estampadas
+                        p.p Camisetas 100% algodón con estampados en serigrafia
+                        a(class="mybtn" href="") Ver más
             .mySwiper__buttons
                 .swiper-button-next.mybtn
                     span Siguiente

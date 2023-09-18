@@ -214,7 +214,7 @@ img {
   --color-btn-call: var(--color-primary-900);
   --color-text: var(--color-primary-900);
   --color-text-white: #fefefe;
-  --color-title: var(--color-white);
+  --color-title: var(--color-text);
   --color-title-white: var(--color-white);
   --color-background-primary: #fefefe;
   --color-background-secondary: #fefefe;
@@ -282,16 +282,6 @@ img {
 .mybtn--disabled {
   opacity: 0.2;
   pointer-events: none;
-}
-
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(./MaterialIcons-Regular.eot);
-  /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"), url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"), url(https://example.com/MaterialIcons-Regular.woff) format("woff"), url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
-  src: url(./MaterialIcons-Regular.ttf) format("truetype");
 }
 
 @font-face {
