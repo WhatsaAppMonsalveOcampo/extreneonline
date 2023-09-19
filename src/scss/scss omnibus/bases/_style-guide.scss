@@ -246,6 +246,7 @@ h4 {
 
   font-size: calc(var(--scale-text) + 42px);
   text-align: center;
+  font-weight: 500;
 
   @include min-height-min-width(400px, 768px) {
     font-size: calc(var(--scale-text) + 48px);
@@ -304,6 +305,7 @@ h4 {
   --space-8: 40px;
   --space-9: 48px;
   --space-10: 56px;
+  --space-15: 84px;
 
   @include min-width(768px) {
     --space-1: 8px;
@@ -316,6 +318,7 @@ h4 {
     --space-8: 48px;
     --space-9: 66px;
     --space-10: 74px;
+    --space-15: 112px;
   }
 }
 

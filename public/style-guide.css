@@ -323,6 +323,7 @@ h4 {
 .h1 {
   font-size: calc(var(--scale-text) + 42px);
   text-align: center;
+  font-weight: 500;
 }
 @media screen and (max-width: 360px) {
   .h1 {
@@ -389,6 +390,7 @@ h4 {
   --space-8: 40px;
   --space-9: 48px;
   --space-10: 56px;
+  --space-15: 84px;
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -402,6 +404,7 @@ h4 {
     --space-8: 48px;
     --space-9: 66px;
     --space-10: 74px;
+    --space-15: 112px;
   }
 }
 
@@ -491,9 +494,9 @@ html body {
 
 p {
   line-height: 1.5;
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 
@@ -784,20 +787,13 @@ img {
   transition: transform 0.5s ease-in-out;
   z-index: 20;
 }
-@media (orientation: landscape) {
-  .contact-button {
-    background-image: none;
-    right: auto;
-    left: 1rem;
-  }
-}
 @media screen and (min-width: 1186px) {
   .contact-button:active {
     transform: scale(0.95);
   }
 }
 @media (hover: hover) {
-  .contact-button:hover::after {
+  .contact-button:hover::before {
     opacity: 1;
   }
   .contact-button:hover .contact-button__icon {
@@ -805,7 +801,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact-button::after {
+  .contact-button::before {
     content: "Comenzar una conversacion por WhatsApp";
     font-size: 14px;
     padding: 12px;

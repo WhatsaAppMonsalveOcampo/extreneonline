@@ -323,6 +323,7 @@ h4 {
 .h1 {
   font-size: calc(var(--scale-text) + 42px);
   text-align: center;
+  font-weight: 500;
 }
 @media screen and (max-width: 360px) {
   .h1 {
@@ -389,6 +390,7 @@ h4 {
   --space-8: 40px;
   --space-9: 48px;
   --space-10: 56px;
+  --space-15: 84px;
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -402,6 +404,7 @@ h4 {
     --space-8: 48px;
     --space-9: 66px;
     --space-10: 74px;
+    --space-15: 112px;
   }
 }
 
@@ -439,7 +442,7 @@ h4 {
   border-radius: 3px;
 }
 
- body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text {
+ .section-new .products .product .product__imgs .product__img, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text {
   position: absolute;
   top: 0;
   right: 0;
@@ -456,13 +459,13 @@ h4 {
   bottom: 0;
 }
 
- body .main .section-3 .cards, body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar__hamburguer, .navbar-header .navbar-header__second .navbar__links, .navbar-header .navbar-header__second .navbar__actions .bag {
+ body .main .section-3 .cards, body .main .section-3, body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar__hamburguer, .navbar-header .navbar-header__second .navbar__links, .navbar-header .navbar-header__second .navbar__actions .bag {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
- body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar-header .navbar-header__second .navbar__links {
+ body .main .section-3, body .main .section-2, body .main .section-1 .mySwiper .swiper-wrapper .swiper-slide .mySwiper__text, body .header .video-header .video-header__text, .navbar-header .navbar-header__second .navbar__links {
   display: flex;
   flex-direction: column;
 }
@@ -500,9 +503,9 @@ html body {
 
 p {
   line-height: 1.5;
-  -webkit-user-select: all;
-     -moz-user-select: all;
-          user-select: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 
@@ -793,20 +796,13 @@ img {
   transition: transform 0.5s ease-in-out;
   z-index: 20;
 }
-@media (orientation: landscape) {
-  .contact-button {
-    background-image: none;
-    right: auto;
-    left: 1rem;
-  }
-}
 @media screen and (min-width: 1186px) {
   .contact-button:active {
     transform: scale(0.95);
   }
 }
 @media (hover: hover) {
-  .contact-button:hover::after {
+  .contact-button:hover::before {
     opacity: 1;
   }
   .contact-button:hover .contact-button__icon {
@@ -814,7 +810,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact-button::after {
+  .contact-button::before {
     content: "Comenzar una conversacion por WhatsApp";
     font-size: 14px;
     padding: 12px;
@@ -988,13 +984,23 @@ body .main .section-2 .about__logo svg {
   width: auto;
   max-width: 100%;
 }
+body .main .section-3 {
+  text-align: center;
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+body .main .section-3 .payment__h1 {
+  margin-top: var(--space-10);
+}
 body .main .section-3 .cards {
-  width: 100%;
   margin-top: var(--space-9);
   margin-bottom: var(--space-9);
   gap: var(--space-7);
+  flex-wrap: wrap;
 }
 body .main .section-3 .cards .card {
+  min-width: -moz-max-content;
+  min-width: max-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1002,10 +1008,118 @@ body .main .section-3 .cards .card {
   gap: var(--space-2);
   border: 1px solid black;
   padding: var(--space-5);
+  width: 100%;
+}
+@media screen and (min-width: 1014px) {
+  body .main .section-3 .cards .card {
+    flex: 1;
+    width: 260px;
+  }
 }
 body .main .section-3 .cards .card h3, body .main .section-3 .cards .card p {
   text-align: center;
 }
 body .main .section-3 .cards .card .card__icon {
   height: 80px;
+}
+body .main .section-3 .cards .card .card__btn {
+  margin-right: auto;
+  margin-left: auto;
+}
+body .main .section-3 .payment__p {
+  max-width: 950px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .main .section-3 .payment__p span {
+  color: red;
+}
+body .main .section-3 .payment__p .payment__btn {
+  font-size: 14px;
+  color: var(--color-primary-700);
+  text-decoration: underline;
+}
+body .main .section-3 .payment__p .payment__btn:hover {
+  color: red;
+}
+
+.section-new {
+  margin-top: var(--space-15);
+}
+.section-new .products {
+  margin-left: var(--space-3);
+  margin-right: var(--space-3);
+  margin-top: var(--space-15);
+  margin-bottom: var(--space-15);
+  gap: var(--space-3);
+  width: 100%;
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  overflow: hidden;
+}
+@media screen and (min-width: 1014px) {
+  .section-new .products {
+    margin-left: var(--space-15);
+    margin-right: var(--space-15);
+    gap: var(--space-7);
+  }
+}
+.section-new .products .product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.section-new .products .product .product__imgs {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+}
+.section-new .products .product .product__imgs .product__img {
+  transition: opacity 0.5s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.section-new .products .product .product__imgs .product__img-2 {
+  opacity: 0;
+}
+.section-new .products .product .product__imgs:hover .product__img-1 {
+  opacity: 0;
+}
+.section-new .products .product .product__imgs:hover .product__img-2 {
+  opacity: 1;
+}
+.section-new .products .product .product__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.section-4 {
+  padding-top: var(--space-15);
+  padding-bottom: var(--space-10);
+}
+.section-4 .slider-hook .swiper-slide {
+  overflow: hidden;
+}
+.section-4 .slider-hook .swiper-slide img {
+  transition: transform 0.3s ease;
+}
+.section-4 .slider-hook .swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  width: auto;
+  color: var(--color-white);
+  padding: 8px 20px;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: "" !important;
 }
