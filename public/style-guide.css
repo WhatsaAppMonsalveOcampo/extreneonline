@@ -208,7 +208,7 @@ img {
   --color-secondary-900: #3b0000;
   --color-btn: var(--color-primary-300);
   --color-btn-hovered: var(--color-white);
-  --color-btn-outlined: var(--color-white);
+  --color-btn-outlined: var(--color-text);
   --color-btn-tonal: var(--color-primary-500);
   --color-btn-tonal-hovered: var(--color-primary-600);
   --color-btn-call: var(--color-primary-900);
@@ -273,6 +273,12 @@ img {
   color: var(--color-btn-outlined);
   border: 1px solid var(--color-btn-outlined);
   box-shadow: none;
+}
+@media (hover: hover) {
+  .mybtn--outlined:hover {
+    color: var(--color-white);
+    background-color: var(--color-text);
+  }
 }
 
 .mybtn--tonal {

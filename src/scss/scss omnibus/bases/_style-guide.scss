@@ -37,7 +37,7 @@
   --color-btn-hovered: var(--color-white);
 
   // * Button outlined
-  --color-btn-outlined: var(--color-white);
+  --color-btn-outlined: var(--color-text);
 
   // * Button tonal
   --color-btn-tonal: var(--color-primary-500);
@@ -127,6 +127,13 @@
   color: var(--color-btn-outlined);
   border: 1px solid var(--color-btn-outlined);
   box-shadow: none;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-text);
+    }
+  }
+
 }
 .mybtn--tonal {
   background-color: var(--color-primary-600);

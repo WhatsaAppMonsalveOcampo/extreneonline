@@ -159,5 +159,33 @@ body {
       }
 
     }
+    .section-3{
+      .cards{
+        width: 100%;
+        margin-top: var(--space-9);
+        margin-bottom: var(--space-9);
+        @extend .flex-center;
+        gap: var(--space-7);
+        .card{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          gap: var(--space-2);
+          border: 1px solid black;
+          padding: var(--space-5);
+          h3,p{
+            text-align: center;
+          }
+          .card__icon{
+            height: 80px;
+            // width: 80px;
+          }
+          .card__btn{
+            // background-color: red;
+          }
+        }
+      }
+    }
   }
 }
