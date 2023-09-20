@@ -103,6 +103,12 @@ address {
 	padding-right: 1rem;    
 }
 
+.container{
+	max-width: calc(100% - var(--space-15));
+	margin-right: auto;
+	margin-left: auto;
+}
+
 // Contenedor para pantallas grandes (≥1200px)
 .container-lg {
 	max-width: 1140px; 

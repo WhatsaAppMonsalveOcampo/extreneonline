@@ -580,7 +580,7 @@ img {
     display: block;
   }
 }
-@media screen and (min-width: 1186px) {
+@media screen and (min-width: 1356px) {
   .navbar-header .container-logo .logo {
     height: 10rem;
   }
@@ -695,9 +695,6 @@ img {
 .navbar-header .navbar-header__second .navbar__links .navbar__link {
   color: var(--color-text);
 }
-.navbar-header .navbar-header__second .navbar__links .navbar__link:hover {
-  font-weight: 300;
-}
 .navbar-header .navbar-header__second .navbar__links .navbar__link--active {
   font-weight: 300;
   cursor: default;
@@ -787,7 +784,7 @@ img {
   transition: transform 0.5s ease-in-out;
   z-index: 20;
 }
-@media screen and (min-width: 1186px) {
+@media screen and (min-width: 1356px) {
   .contact-button:active {
     transform: scale(0.95);
   }

@@ -11,71 +11,87 @@ const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 
+// const webp = require('gulp-webp');
+
+
 // TODO--- PUG
 
 const minified = false;
 const renamePHP = false;
 gulp.task("pugPages", () => {
-	return (
-		gulp
-			.src("./src/pug/pages/*.pug")
-			.pipe(
-				pug({
-					pretty: minified ? false : true,
-				})
-			)
-			// .pipe(rename({
-			//     extname: ".php"
-			// }))
-			.pipe(gulp.dest("./public"))
-	);
+  return (
+    gulp
+      .src("./src/pug/pages/*.pug")
+      .pipe(
+        pug({
+          pretty: minified ? false : true,
+        })
+      )
+      // .pipe(rename({
+      //     extname: ".php"
+      // }))
+      .pipe(gulp.dest("./public"))
+  );
 });
 
 gulp.task("cssPages", () => {
-	var procesadores = [autoprefixer, cssnano];
-	return gulp
-		.src("./src/scss/scss pages/*.scss")
-		.pipe(sass().on("error", sass.logError))
-		.pipe(postcss(procesadores))
-		.pipe(
-			purgecss({
-				content: ["./public/*.html"],
-				css: ["./public/styles.css"],
-				safelist: ["hamburguer--simple", "navbar--visible", "pointer-events-none", "contact-button--hiden", "animated-border", "navbar-header--hide", "navbar-header--small", "navbar-header--background"],
-				FontFace: true,
-				variables: false,
-			})
-		)
-		.pipe(gulp.dest("./public/"));
+  var procesadores = [autoprefixer, cssnano];
+  return gulp
+    .src("./src/scss/scss pages/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss(procesadores))
+    .pipe(
+      purgecss({
+        content: ["./public/*.html"],
+        css: ["./public/styles.css"],
+        safelist: [
+          "hamburguer--simple",
+          "navbar--visible",
+          "pointer-events-none",
+          "contact-button--hiden",
+          "animated-border",
+          "navbar-header--hide",
+          "navbar-header--small",
+          "navbar-header--background",
+        ],
+        FontFace: true,
+        variables: false,
+      })
+    )
+    .pipe(gulp.dest("./public/"));
 });
 
 // TODO--- COMPILAR JS CON BABEL
 
 gulp.task("babel", () => {
-	return gulp
-		.src("./src/js/use/*.js")
-		.pipe(concat("scripts-min.js"))
-		.pipe(
-			babel({
-				presets: ["@babel/env"],
-			})
-		)
-		.pipe(terser())
-		.pipe(gulp.dest("./public"));
+  return gulp
+    .src("./src/js/use/*.js")
+    .pipe(concat("scripts-min.js"))
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(terser())
+    .pipe(gulp.dest("./public"));
 });
 gulp.task("babelPages", () => {
-	return gulp
-		.src("./src/js/use/pages/*.js")
-		.pipe(
-			babel({
-				presets: ["@babel/env"],
-			})
-		)
-		.pipe(terser())
-		.pipe(gulp.dest("./public"));
+  return gulp
+    .src("./src/js/use/pages/*.js")
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(terser())
+    .pipe(gulp.dest("./public"));
 });
 
 // TODO--- MINIFICAR IMAGENES DEFAULT
+
+
+
+
 
 
 // gulp.task("imagemin", () => {
@@ -107,8 +123,8 @@ gulp.task("babelPages", () => {
 // });
 
 gulp.task("default", () => {
-	gulp.watch("./src/pug/**/*.pug", gulp.series("pugPages"));
-	gulp.watch("./src/scss/**/*.scss", gulp.series("cssPages"));
-	gulp.watch("./src/js/use/*.js", gulp.series("babel"));
-	gulp.watch("./src/js/use/pages/*.js", gulp.series("babelPages"));
+  gulp.watch("./src/pug/**/*.pug", gulp.series("pugPages"));
+  gulp.watch("./src/scss/**/*.scss", gulp.series("cssPages"));
+  gulp.watch("./src/js/use/*.js", gulp.series("babel"));
+  gulp.watch("./src/js/use/pages/*.js", gulp.series("babelPages"));
 });

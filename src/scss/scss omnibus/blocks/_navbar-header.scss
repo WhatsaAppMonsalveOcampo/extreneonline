@@ -159,9 +159,6 @@
 
       .navbar__link {
         color: var(--color-text);
-        &:hover {
-          font-weight: 300;
-        }
       }
       .navbar__link--active {
         font-weight: 300;
