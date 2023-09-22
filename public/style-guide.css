@@ -227,7 +227,7 @@ img {
 }
 
 .mybtn {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--border-radius);
   font-family: "button", "p", arial;
   font-size: 14px;
@@ -307,16 +307,16 @@ h3,
 h4 {
   font-family: "title";
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-title);
-  --scale-text: 1px;
+  --scale-text: 10px;
 }
 @media screen and (max-width: 350px) {
   h1,
   h2,
   h3,
   h4 {
-    --scale-text: 10px;
+    --scale-text: 0px;
   }
 }
 
@@ -357,6 +357,7 @@ h4 {
 
 .h4 {
   font-size: calc(var(--scale-text) + 20px);
+  font-weight: 400px;
 }
 @media (min-height: 400px) and (min-width: 768px) {
   .h4 {
@@ -450,13 +451,13 @@ h4 {
   bottom: 0;
 }
 
- .navbar__hamburguer, .navbar-header .navbar-header__second .navbar__links, .navbar-header .navbar-header__second .navbar__actions .bag {
+ .navbar__hamburguer, .footer .container-footer .footer__social-networks .footer__social-network, .footer .container-footer .footer__social-networks, .footer .container-footer, .navbar-header .navbar-header__second .navbar__links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
- .style-guide__sections .style-guide__texts, .style-guide__sections .style-guide__section-colors, .style-guide__sections .style-guide__sample-texts, .style-guide__sections, .navbar-header .navbar-header__second .navbar__links {
+ .style-guide__sections .style-guide__texts, .style-guide__sections .style-guide__section-colors, .style-guide__sections .style-guide__sample-texts, .style-guide__sections, .footer .container-footer, .navbar-header .navbar-header__second .navbar__links {
   display: flex;
   flex-direction: column;
 }
@@ -606,49 +607,6 @@ img {
 .navbar-header .navbar-header__second .navbar__actions {
   padding-bottom: 3px;
 }
-.navbar-header .navbar-header__second .navbar__actions .bag {
-  position: relative;
-  cursor: pointer;
-  vertical-align: middle;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag path {
-  transition: opacity 0.3s ease;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag .bag__icon .bag__icon--outline {
-  opacity: 1;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag .bag__icon .bag__icon--fill {
-  opacity: 0;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag:hover .bag__icon--fill {
-  opacity: 1;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag:hover .bag__icon--outline {
-  opacity: 0;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag:hover::before {
-  opacity: 1;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag span {
-  margin-top: 2px;
-  line-height: 1;
-}
-.navbar-header .navbar-header__second .navbar__actions .bag::before {
-  content: "99";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-text);
-  padding: 8px 4px;
-  background-color: white;
-  border-radius: 16px;
-  font-size: 12px;
-  position: absolute;
-  top: 12px;
-  left: -4px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 .navbar-header .navbar-header__second .navbar__actions > * {
   display: none;
   transition: transform 0.3s ease;
@@ -718,6 +676,49 @@ img {
 
 .navbar-header--background {
   background-color: rgb(255, 255, 255);
+}
+
+.footer {
+  position: relative;
+  background-color: #dddddd;
+  width: 100%;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  padding-top: calc(var(--space-15) + 2rem);
+  padding-bottom: calc(var(--space-15) + 2rem);
+  overflow: hidden;
+}
+.footer .container-footer {
+  height: 100%;
+  width: 100%;
+  gap: var(--space-7);
+}
+.footer .container-footer .footer__logo {
+  width: 40rem;
+  max-width: 80vw;
+  overflow: hidden;
+}
+.footer .container-footer .footer__logo svg {
+  height: auto;
+  width: 100%;
+}
+.footer .container-footer .footer__social-networks {
+  gap: var(--space-5);
+}
+.footer .container-footer .footer__social-networks .footer__social-network {
+  gap: var(--space-1);
+}
+.footer .container-footer .footer__social-networks .footer__social-network svg {
+  height: 32px;
+  width: auto;
+}
+.footer .container-footer .footer__social-networks .footer__social-network span {
+  font-family: "title";
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.footer .container-footer .footer__social-networks .footer__social-network:hover {
+  text-decoration: underline;
 }
 
 .hamburguer {

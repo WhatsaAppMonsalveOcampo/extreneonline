@@ -53,6 +53,7 @@ gulp.task("cssPages", () => {
           "navbar-header--hide",
           "navbar-header--small",
           "navbar-header--background",
+          "navbar__link--active"
         ],
         FontFace: true,
         variables: false,

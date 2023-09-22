@@ -2,7 +2,6 @@
 
 body {
   position: relative;
-  height: 4000px;
 
   .header {
     height: 100vh;
@@ -38,7 +37,7 @@ body {
 
         .video-header__content-text {
           margin-top: auto;
-          margin-bottom: 20vh;
+          margin-bottom: 30vh;
           overflow: hidden;
           width: 100%;
           display: flex;
@@ -260,8 +259,7 @@ body {
       position: relative;
       gap: var(--space-3);
       overflow: hidden;
-      cursor: pointer;
-      user-select: none !important;
+      user-select: none;
       .product-slider {
         aspect-ratio: 3/4;
         width: 100%;
@@ -277,7 +275,7 @@ body {
             color: var(--color-text);
             opacity: 0;
             transition: opacity 0.3 ease;  
-            display: block;
+            display: inline;
             &:hover {
               text-decoration: underline;
             }
@@ -285,6 +283,7 @@ body {
 
         }
         .product-slider__slides {
+          cursor: pointer;
           .product-slider__slide {
             overflow: hidden;
             .product-slider__img {
@@ -361,7 +360,7 @@ body {
         &:active {
           transform: scale(0.9);
         }
-        .producto__bag_text {
+        .product__bag_text {
           font-size: 14px;
           transition: opacity 0.3s ease;
           opacity: 0;
@@ -373,7 +372,7 @@ body {
           .bag__icon {
             transform: scale(1.05);
           }
-          .producto__bag_text {
+          .product__bag_text {
             opacity: 1;
           }
           .product-slider__img {

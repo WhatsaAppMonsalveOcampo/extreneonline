@@ -1,0 +1,34 @@
+extends ../templates/template.pug
+block head
+    link(rel="stylesheet" type="text/css" href="./tiendas.css")
+block header
+    .header__img
+        img(src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", alt="Tienda de ropa")
+    .header__text
+        h2.h4.video-header__tittle Más de 60 años fabricando estilo
+        a(href=`${whatsapp} Quiero que me atienda alguien` target="blank" class="mybtn") Quiero que me atienda alguien
+
+
+block main
+    section.section-1
+        h1.h1 Somos Tienda Física
+        .section-1__text
+            p.p En cada una de nuestras tiendas, encontrarás una amplia selección de productos de alta calidad y un equipo dedicado a brindarte asesoramiento experto. Ven y descubre lo que tenemos para ti en nuestras tres acogedoras ubicaciones en Pereira.
+            a(class="mybtn mybtn--outlined" href=`${whatsapp} Quiero ir a las tiendas` target="blank") Quiero ir a las tiendas
+    section.stores
+        .store
+            .store__map
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.583884595019!2d-75.69769405528757!3d4.805749771826099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388748778338f9%3A0xdeb9da33110ca5c0!2sExtrene!5e0!3m2!1ses-419!2sco!4v1695340441570!5m2!1ses-419!2sco"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            .store__text
+                p.store__p Carrera 8 #15-52
+        .store
+            .store__map
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.583884595019!2d-75.69769405528757!3d4.805749771826099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388748778338f9%3A0xdeb9da33110ca5c0!2sExtrene!5e0!3m2!1ses-419!2sco!4v1695340441570!5m2!1ses-419!2sco"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            .store__text
+                p.store__p Carrera 8 #15-52
+        .store
+            .store__map
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7951.583884595019!2d-75.69769405528757!3d4.805749771826099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388748778338f9%3A0xdeb9da33110ca5c0!2sExtrene!5e0!3m2!1ses-419!2sco!4v1695340441570!5m2!1ses-419!2sco"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            .store__text
+                p.store__p Carrera 8 #15-52
+        

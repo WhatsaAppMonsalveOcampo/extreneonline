@@ -37,5 +37,17 @@ var swiper = new Swiper(".product-slider", {
     nextEl: ".product-slider-btn-next",
     prevEl: ".product-slider-btn-prev",
   },
-
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   window.addEventListener("click", function (e) {
+//     if(document.querySelector(".product img").contains(e.target)){}
+//     console.log(e.target)
+//     // window.location.href = "https://www.ejemplo.com";
+//   });
+//   var enlace = document.querySelector(".product img");
+//   enlace.addEventListener("click", function () {
+//     alert("hoal")
+//     // window.location.href = "https://www.ejemplo.com";
+//   },);
+// });

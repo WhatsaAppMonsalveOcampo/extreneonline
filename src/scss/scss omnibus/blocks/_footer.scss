@@ -1,13 +1,49 @@
 .footer {
   position: relative;
-  background-color: bisque;
+  background-color: #dddddd;
+  width: 100%;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  padding-top: calc(var(--space-15) + 2rem);
+  padding-bottom: calc(var(--space-15) + 2rem);
+  overflow: hidden;
 
   .container-footer {
-    @extend .position-absolute, .flex-center, .flex-column;
+    @extend .flex-center, .flex-column;
     height: 100%;
-
-    .h1 {
-      color: var(--color-text);
+    width: 100%;
+    gap: var(--space-7);
+    .footer__logo{
+      width: 40rem;
+      max-width: 80vw;
+      overflow: hidden;
+      svg{
+        height: auto;
+        width: 100%;
+      }
     }
+    .footer__social-networks{
+      @extend .flex-center;
+      gap: var(--space-5);
+      .footer__social-network{
+        @extend .flex-center;
+        gap: var(--space-1);
+        svg{
+          height: 32px;
+          width: auto;
+        }
+        span{
+
+          font-family: 'title';
+          letter-spacing: 1px;
+          font-size: 18px;
+        }
+        &:hover{
+          text-decoration: underline;
+        }
+
+      }
+    }
+
   }
 }

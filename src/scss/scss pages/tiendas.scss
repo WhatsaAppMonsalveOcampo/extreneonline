@@ -1,0 +1,102 @@
+@import "../scss omnibus/global";
+body {
+  .header {
+    @extend .flex-center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    .header__img{
+        height: 100%;
+        width: 100%;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .header__text {
+      @extend .position-absolute, .flex-center, .flex-column;
+      gap: var(--space-3);
+      background-color: rgba(255, 255, 255, 0.7);
+      overflow: hidden;
+      width: 100%;
+      font-weight: 200;
+      gap: var(--space-3);
+
+      h2{
+        letter-spacing: 1px;
+        line-height: 1.5;
+        font-size: 14px;
+        text-align: end;
+      }
+    }
+  }
+  .main{
+    .section-1{
+        @extend .flex-center;
+        flex-direction: column;
+        width: 100%;
+        padding-left: var(--space-5);
+        padding-right: var(--space-5);
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
+        gap: var(--space-5);
+        margin-right: auto;
+        margin-left: auto;
+        
+        @include tablet-landscape{
+            flex-direction: row;
+            max-width: 1200px;
+            height: 500px;
+        }
+        h1{
+            padding: var(--space-3);
+            flex: 1;
+            font-size: 5rem;
+            // border: 1px solid rgb(0, 0, 0);
+        }
+        &__text{
+            @extend .flex-center, .flex-column;
+            flex: 1;
+            gap: var(--space-3);
+            p{
+                flex: 1;
+            }
+        }
+    }
+    .stores{
+        @extend .flex-center;
+        width: 100%;
+        gap: var(--space-7);
+        padding: var(--space-7) var(--space-3);
+        padding-top: 0;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        .store{
+            @extend .flex-center, .flex-column;
+            flex: 1;
+            width: 100%;
+            height: 100;;
+            overflow: hidden;
+            gap: var(--space-5);
+            .store__map{
+                border: 1px solid black;
+                flex: 3;
+                width: 100%;
+                overflow: hidden;
+                iframe{
+                    height: 100%;
+                    height: 500px;
+                    width: 100%
+                }
+            }
+            .store__text{
+                @extend .flex-center;
+                height: 100%;
+                flex: 1;
+            }
+        }
+    }
+  }
+}

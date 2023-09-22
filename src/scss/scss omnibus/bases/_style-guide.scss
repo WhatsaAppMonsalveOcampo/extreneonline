@@ -82,7 +82,7 @@
 //  TODO:ANCHOR --- BUTTON
 
 .mybtn {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--border-radius);
   font-family: "button", "p", arial;
   font-size: 14px;
@@ -230,11 +230,11 @@ h3,
 h4 {
   font-family: "title";
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-title);
-  --scale-text: 1px;
+  --scale-text: 10px;
   @include mobile-small {
-    --scale-text: 10px;
+    --scale-text: 0px;
   }
 }
 
@@ -271,6 +271,7 @@ h4 {
 
 .h4 {
   font-size: calc(var(--scale-text) + 20px);
+  font-weight: 400px;
 
   @include min-height-min-width(400px, 768px) {
     font-size: calc(var(--scale-text) + 22px);
