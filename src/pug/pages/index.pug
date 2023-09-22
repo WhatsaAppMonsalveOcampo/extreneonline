@@ -12,7 +12,7 @@ block header
             <source  src="video-header-portrait.webm" type="video/mp4">
         </video>
         <video class="video-header__landscape" autoplay loop muted >
-            <source  src="video-header.webm" type="video/mp4">
+            <source  src="video-header-landscape.webm" type="video/mp4">
         </video>
 
         .video-header__text
@@ -54,12 +54,13 @@ block main
     section.section-new
         h2.h1.new__h1 Nueva Colección
         .products
-            include ../blocks/product.pug
-            include ../blocks/product.pug
-            include ../blocks/product.pug
-            include ../blocks/product.pug
-            include ../blocks/product.pug
-            include ../blocks/product.pug
+            
+            include ../products/product-1.pug
+            include ../products/product-2.pug
+            include ../products/product-3.pug
+            //- include ../products/product.pug
+            //- include ../products/product.pug
+            //- include ../products/product.pug
 
     section.section-4
         .swiper.slider-hook

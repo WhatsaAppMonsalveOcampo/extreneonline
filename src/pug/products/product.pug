@@ -1,0 +1,20 @@
+.product
+    .swiper.product-slider
+        a( class="product-slider__slides swiper-wrapper" href=`${whatsapp} Me interesa ${imagen1}` target="blank")
+            .product-slider__slide.swiper-slide
+                img(class="product-slider__img" src=imagen1 alt="foto de la prenda")
+            .product-slider__slide.swiper-slide
+                img(class="product-slider__img" src=imagen2 alt="foto de la prenda")
+        .product-slider__btns
+            .product-slider-btn-next.swiper-button-next
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="m309.346-98.232-44.96-45.191L603.27-481.615l-338.884-338.5 44.96-44.884L692.73-481.615 309.346-98.232Z"/></svg>
+            .product-slider-btn-prev.swiper-button-prev
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="m309.346-98.232-44.96-45.191L603.27-481.615l-338.884-338.5 44.96-44.884L692.73-481.615 309.346-98.232Z"/></svg>
+        
+        a(class="product__btn mybtn" href=`${whatsapp} Me interesa ${imagen1}`  target="blank") Más información
+    .product__text
+        h4.h4.product__title= nombre
+        span= `${precio} COP`
+    //- .producto__bag
+    //-     include ../icons/icon-bolsa.pug
+    //-     span.product__bag_text agregar
