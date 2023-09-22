@@ -689,7 +689,7 @@ img {
 
 .footer {
   position: relative;
-  background-color: #dddddd;
+  background-color: #eeeeee;
   width: 100%;
   padding-left: var(--space-3);
   padding-right: var(--space-3);
@@ -901,6 +901,7 @@ body .main .stores {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 10rem;
 }
 body .main .stores .store {
   flex: 1;
@@ -923,4 +924,6 @@ body .main .stores .store .store__map iframe {
 body .main .stores .store .store__text {
   height: 100%;
   flex: 1;
+  width: 100%;
+  gap: var(--space-3);
 }
