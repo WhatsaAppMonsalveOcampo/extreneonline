@@ -11,7 +11,9 @@ const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 
-// const webp = require('gulp-webp');
+// const imagemin = require("imagemin");
+const imagemin = require('imagemin');
+const imageminWebp = require("imagemin-webp");
 
 
 // TODO--- PUG
@@ -53,7 +55,7 @@ gulp.task("cssPages", () => {
           "navbar-header--hide",
           "navbar-header--small",
           "navbar-header--background",
-          "navbar__link--active"
+          "navbar__link--active",
         ],
         FontFace: true,
         variables: false,
@@ -89,9 +91,6 @@ gulp.task("babelPages", () => {
 });
 
 // TODO--- MINIFICAR IMAGENES DEFAULT
-
-
-
 
 
 
