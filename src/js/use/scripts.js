@@ -4,12 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     links.forEach(function(link) {
         let linkPath = link.getAttribute('href');
-        console.log(currentPath)
-        console.log(linkPath)
 
         if (currentPath == linkPath) {
             link.classList.add('navbar__link--active');
-            console.log("aja")
         } else {
             link.classList.remove('navbar__link--active');
         }

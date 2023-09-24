@@ -11,9 +11,6 @@ const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 
-// const imagemin = require("imagemin");
-const imagemin = require('imagemin');
-const imageminWebp = require("imagemin-webp");
 
 
 // TODO--- PUG

@@ -1,18 +1,19 @@
+
 {
-  "name": "nombre-del-proyecto",
+  "name": "extreneonline",
   "version": "1.0.0",
-  "description": "Descripción del proyecto",
-  "type": "module",
+  "description": "tienda online",
+
   "main": "index.js",
   "scripts": {
-    "server": "node server.js"
+    "server": "node server.js",
+    "imagemin": "node minify.mjs"
   },
   "dependencies": {
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "ip": "^1.1.8",
-    "path": "^0.12.7",
-    "sharp": "^0.32.6"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",

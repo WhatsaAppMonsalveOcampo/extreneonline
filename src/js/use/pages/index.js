@@ -40,3 +40,21 @@ var swiper = new Swiper(".product-slider", {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const videoPortrait = document.querySelector('.video-header__video--portrait');
+  const videoLandscape = document.querySelector('.video-header__video--landscape');
+  const fallbackImage = document.querySelector('.video-header__img');
+
+  videoPortrait.addEventListener('loadeddata', function() {
+      // videoPortrait.style.display = 'block';
+      fallbackImage.style.display = 'none'; 
+
+  });
+
+  videoLandscape.addEventListener('loadeddata', function() {
+      // videoLandscape.style.display = 'block';
+      fallbackImage.style.display = 'none';
+  });
+});
+
+

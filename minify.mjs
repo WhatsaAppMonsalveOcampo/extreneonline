@@ -8,18 +8,17 @@ imagemin(["src/img/products/camisetas-basicas/*"], {
     destination: "public/img/products/camisetas-basicas",
     plugins: [
         imageminWebp({
-            quality: 50, // Establece el factor de calidad entre 0 y 100.
             quality: 70, // Reduzco la calidad a 70 para mantener un buen equilibrio entre calidad y tamaño de archivo.
             method: 6, // Utilizo el método de compresión más lento para obtener una mejor compresión.
             sns: 80, // Aumento la amplitud de spatial noise shaping para mejorar la calidad visual.
             filter: 60, // Aumento la fuerza del filtro de bloqueo para mejorar la calidad visual.
-            crop: { 
-               x: 0, 
-               y: 100, 
-               width: 720, 
-               height: 1080 
-           }
-          //   resize: { width: 800 }, // Cambio el ancho de la imagen a 800 píxeles. El alto se ajustará automáticamente para mantener la proporción.
+        //     crop: { 
+        //        x: 0, 
+        //        y: 100, 
+        //        width: 720, 
+        //        height: 1080 
+        //    },
+            resize: { width: 360, height: 540 }, // Cambio el ancho de la imagen a 800 píxeles. El alto se ajustará automáticamente para mantener la proporción.
             //preset: 'default', // Opciones: default, photo, picture, drawing, icon, text.
             //alphaQuality: 100, // Establece la calidad de compresión de transparencia entre 0 y 100.
             //method: 4, // Especifica el método de compresión entre 0 (más rápido) y 6 (más lento).

@@ -12,20 +12,28 @@ body {
       height: 100%;
       width: 100%;
       position: relative;
-      video {
+      .video-header__img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        z-index: 0;
       }
-      .video-header__landscape {
+      .video-header___video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: $z-index-1;
+        @extend .position-absolute;
+      }
+      .video-header__video--landscape {
         display: none;
       }
 
       @include tablet-portrait {
-        .video-header__portrait {
+        .video-header__video--portrait {
           display: none;
         }
-        .video-header__landscape {
+        .video-header__video--landscape {
           display: block;
         }
       }
@@ -33,12 +41,12 @@ body {
         @extend .position-absolute, .flex-center, .flex-column;
         gap: var(--space-9);
         z-index: $z-index-2;
-        padding: var(--space-5);
+        padding: var(--space-5); 
         background-color: rgba(255, 255, 255, 0.7);
 
         .video-header__content-text {
           margin-top: auto;
-          margin-bottom: 30vh;
+          margin-bottom: 25vh;
           overflow: hidden;
           width: 100%;
           display: flex;
@@ -112,7 +120,8 @@ body {
         .mySwiper__buttons {
           .swiper-button-next,
           .swiper-button-prev {
-            width: auto;
+            height: 48px;
+            width: 48px;
             color: var(--color-white);
             padding: 8px 20px;
 

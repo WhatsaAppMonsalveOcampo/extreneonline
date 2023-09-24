@@ -8,17 +8,30 @@ block head
 
 block header
     .video-header
-        <video class="video-header__portrait"autoplay loop muted >
-            <source  src="video-header-portrait.webm" type="video/mp4">
-        </video>
-        <video class="video-header__landscape" autoplay loop muted >
-            <source  src="video-header-landscape.webm" type="video/mp4">
-        </video>
-
+        <picture >
+            <source media="(orientation: landscape)" srcset="/video-landscape.webp">
+            img(class="video-header__img" src="/video-portrait.webp" alt="foto de modelo")
+        </picture>
+        video(class="video-header___video video-header__video--portrait" autoplay loop muted playsinline)
+            source(src="video-header-portrait.webm" type="video/webm")
+        video(class="video-header___video video-header__video--landscape" autoplay loop muted playsinline)
+            source(src="video-header-landscape.webm" type="video/webm")
         .video-header__text
             .video-header__content-text
                 h2.h4.video-header__tittle Más de 60 años fabricando estilo
                 a(href=`${whatsapp} Quiero que me atienda alguien` target="blank" class="mybtn") Quiero que me atienda alguien
+    //- .video-header
+    //-     <video class="video-header__video--portrait"autoplay loop muted >
+    //-         <source  src="video-header-portrait.webm" type="video/mp4">
+    //-     </video>
+    //-     <video class="video-header__video--landscape" autoplay loop muted >
+    //-         <source  src="video-header-landscape.webm" type="video/mp4">
+    //-     </video>
+
+    //-     .video-header__text
+    //-         .video-header__content-text
+    //-             h2.h4.video-header__tittle Más de 60 años fabricando estilo
+    //-             a(href=`${whatsapp} Quiero que me atienda alguien` target="blank" class="mybtn") Quiero que me atienda alguien
 block main 
     section.section-top.section-2.container-lg
         .about__logo
@@ -80,7 +93,7 @@ block main
                         <source media="(orientation: landscape)" srcset="./img/03-landscape.webp">
                         img(class="slider-hook__img" src="./img/03-portrait.webp" alt="foto de modelo")
                     </picture>
-            .swiper-pagination
+            //- .swiper-pagination
 
     section.section-3
         h2.h1.payment__h1 Facil y con confianza
@@ -103,5 +116,5 @@ block main
         p.payment__p En 
             span Extrene 
             | lo hacemos fácil para ti! Puedes pagar como prefieras y el envío es gratis. ¡Elige lo que más te guste y listo, así de sencillo! Disfruta de tus compras sin complicaciones. 
-            a(href="" class="payment__btn") Quiero hablar con alguien
+            a(class="payment__btn" href=`${whatsapp} Quiero saber sobre los envíos` target="blank") Quiero hablar con alguien
 

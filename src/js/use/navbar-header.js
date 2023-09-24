@@ -5,7 +5,6 @@ $hamburguer = document.getElementById("hamburguer"),
 $hamburgerDivCenter = document.getElementById("hamburguer__div-center")
 let initialScroll = window.scrollY
 
-console.log("click")
 $hamburguer.addEventListener("click", () => {
 	$hamburgerDivCenter.classList.toggle("hamburguer--simple")
 	document.getElementById("navbar__links").classList.toggle("navbar--visible");
@@ -14,24 +13,9 @@ $hamburguer.addEventListener("click", () => {
 
 });
 
-// const navbarLinks = document.querySelectorAll(".navbar__link");
-
-// navbarLinks.forEach((link) => {
-// 	link.addEventListener("click", (e) => {
-// 		// Quita la clase .navbar__link--active de todos los elementos
-// 		navbarLinks.forEach((link) => {
-// 			link.classList.remove("navbar__link--active");
-// 		});
-
-// 		// Agrega la clase .navbar__link--active solo al elemento clicado
-// 		e.target.classList.add("navbar__link--active");
-// 	});
-// });
 
 window.addEventListener("scroll", () => {
-	// console.log("initial " + initialScroll)
 	let currentScroll = window.scrollY
-	// console.log("current " + currentScroll)
 	if (currentScroll >= initialScroll) {
 		$navbarHeader.classList.add("navbar-header--small")
 		$navbarHeader.classList.add("navbar-header--hide")

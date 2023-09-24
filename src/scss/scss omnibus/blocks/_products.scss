@@ -62,11 +62,17 @@
             .product-slider__img {
               transition: transform 0.5s ease-out;
               object-fit: cover;
+              height: 100%;
+              width: 100%;
             
             }
           }
         }
         .product-slider__btns {
+          .swiper-button-prev, .swiper-button-next{
+            height: 48px;
+            width: 48px;
+          }
           .swiper-button-prev {
             transform: scaleX(-1);
             left: -8px;
@@ -77,13 +83,11 @@
           div {
             width: fit-content;
             padding: 0;
-            width: 48px;
             overflow: hidden;
           }
           svg {
-            height: auto;
-            width: 32px;
             fill: var(--color-primary-500);
+            height: 32px;
           }
         }
       }
