@@ -32,11 +32,10 @@
       gap: var(--space-3);
       overflow: hidden;
       user-select: none;
+      background-color: #f2f2f2;
       .product-slider {
-        aspect-ratio: 3/4;
         width: 100%;
         flex: 1;
-        border: 1px solid green;
         .product__btn {
           display: none;
           @include tablet-landscape{
@@ -56,15 +55,14 @@
 
         }
         .product-slider__slides {
-            border: 1px solid red;
           cursor: pointer;
           .product-slider__slide {
+            aspect-ratio: 2/3;
+            overflow: hidden;
             .product-slider__img {
               transition: transform 0.5s ease-out;
-              height: 100%;
-              min-width: 100%;
-              border: 1px solid blue;
               object-fit: cover;
+            
             }
           }
         }
@@ -93,6 +91,8 @@
         display: flex;
         flex-direction: column;
         gap: var(--space-1);
+        padding: var(--space-1);
+        padding-top: 0;
         .product__title,
         span {
           font-size: 14px;
@@ -153,7 +153,7 @@
             opacity: 1;
           }
           .product-slider__img {
-            transform: scale(1.05);
+            transform: scale(1.03);
           }
           .product__btn {
             opacity: 1  
