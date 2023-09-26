@@ -12,7 +12,7 @@
     @extend .flex-center, .flex-column;
     height: 100%;
     width: 100%;
-    gap: var(--space-7);
+    gap: var(--space-9);
     .footer__logo{
       width: 40rem;
       max-width: 80vw;
@@ -29,7 +29,7 @@
         @extend .flex-center;
         gap: var(--space-1);
         svg{
-          height: 32px;
+          height: 28px;
           width: auto;
         }
         span{

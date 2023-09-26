@@ -53,6 +53,9 @@ gulp.task("cssPages", () => {
           "navbar-header--small",
           "navbar-header--background",
           "navbar__link--active",
+          "video-header__video--portrait",
+          "video-header__video--landscape",
+          "video-header___video"
         ],
         FontFace: true,
         variables: false,

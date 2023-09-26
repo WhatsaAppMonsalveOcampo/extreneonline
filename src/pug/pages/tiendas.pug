@@ -3,16 +3,16 @@ block head
     link(rel="stylesheet" type="text/css" href="./tiendas.css")
 block header
     .header__img
-        img(src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80", alt="Tienda de ropa")
+        img(src="img/tiendas.webp", alt="Tienda de ropa")
     .header__text
         h2.h4.video-header__tittle Más de 60 años fabricando estilo
-        a(href=`${whatsapp} Quiero que me atienda alguien` target="blank" class="mybtn") Quiero que me atienda alguien
+        a(class="mybtn mybtn--header" href=`${whatsapp} Quiero que me atienda alguien` target="blank" ) Comprar
 
 
 block main
-    section.section-1
+    section.slider-1
         h1.h1 Somos Tienda Física
-        .section-1__text
+        .slider-1__text
             p.p En cada una de nuestras tiendas, encontrarás una amplia selección de productos de alta calidad y un equipo dedicado a brindarte asesoramiento experto. Ven y descubre lo que tenemos para ti en nuestras tres acogedoras ubicaciones en Pereira.
             a(class="mybtn mybtn--outlined" href=`${whatsapp} Quiero ir a las tiendas` target="blank") Quiero ir a las tiendas
     section.stores

@@ -84,7 +84,7 @@
 .mybtn {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--border-radius);
-  font-family: "button", "p", arial;
+  font-family: "p" Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
   padding: 10px 24px;
@@ -147,6 +147,26 @@
 .mybtn--sm {
   padding: 8px 20px;
 }
+
+.mybtn--header{
+  font-size: 24px;
+  padding: 14px 0 ;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  min-width: 277.8px;
+  font-weight: 200;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
+  background-color: #fff;
+  &:hover{
+    color: #fff;
+    background-color: var(--color-primary-700);
+
+  }
+
+}
+
 
 // TODO:ANCHOR --- ICONS
 
